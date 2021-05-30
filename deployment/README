@@ -1,2 +1,30 @@
-https://andrewlock.net/running-kubernetes-and-the-dashboard-with-docker-desktop/
+Note: Make Sure image is pushed it to the repository and configure it in deployment.yaml
 
+#####################################################
+Goto caterer-service folder and create docker image.
+#####################################################
+
+1. mvn clean package -DskipTests
+
+2. docker build -t caterer-service .
+
+3. docker tag caterer-service <user-name>/caterer-service
+
+4. docker push <user-name>/caterer-service
+
+=======================================================
+Depending on the environment change configmap.yaml
+
+1. configure mongo db Host name, port and DB name
+2. Configure Redis details.
+3. configure kafka details.
+======================================================
+
+#Deply mongo db
+kubectl apply -f mongo.yaml
+
+#To deploy catering service
+kubectl apply -f configmap.yaml
+kubectl apply -f pvc.yaml
+kubectl apply -f service.yaml
+kubectl apply -f deployment.yaml

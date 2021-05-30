@@ -21,10 +21,13 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../caterer-service" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration>C:\Users\subbanarasa.puttana\AppData\Roaming\Subversion</configuration>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="b20f735f-9155-4a9c-bee4-7319b18baf6e" name="Default Changelist" comment="" />
@@ -35,6 +38,9 @@
       <workItem from="1622393173963" duration="193000" />
       <workItem from="1622393387772" duration="518000" />
       <workItem from="1622394222472" duration="254000" />
+      <workItem from="1622395486769" duration="398000" />
+      <workItem from="1622395961035" duration="187000" />
+      <workItem from="1622396186673" duration="1576000" />
     </task>
     <servers />
   </component>
