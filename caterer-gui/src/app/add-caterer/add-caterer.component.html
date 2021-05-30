@@ -1,0 +1,50 @@
+<div class="jumbotron" >
+  <div class="panel-heading">
+    <h2>Fill Caterer Details</h2>
+    <span class="alert-warning" *ngIf="error">{{error}}</span>
+  </div>
+  <div class="submit-form">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input class="form-control" type="text" id="name" required [(ngModel)]="caterer.name" name="name"/>
+    </div>
+    <div class="form-group">
+      <label for="cityName">City Name</label>
+      <input class="form-control" type="text" id="cityName" required [(ngModel)]="location.cityName" name="cityName"/>
+    </div>
+    <div class="form-group">
+      <label for="streetNameAndNumber">Street Name And Number</label>
+      <input class="form-control" type="text" id="streetNameAndNumber" required [(ngModel)]="location.streetNameAndNumber" name="streetNameAndNumber"/>
+    </div>
+    <div class="form-group">
+      <label for="postalCode">Postal Code</label>
+      <input class="form-control" type="text" id="postalCode" required [(ngModel)]="location.postalCode" name="postalCode"/>
+    </div>
+
+    <div class="form-group">
+      <label for="minNumberOfGuests">Min Guests</label>
+      <input class="form-control" type= "number" id="minNumberOfGuests" required [(ngModel)]="capacity.minNumberOfGuests" name="minNumberOfGuests"/>
+    </div>
+    <div class="form-group">
+      <label for="maxNumberOfGuests">Max Guests</label>
+      <input class="form-control" type="number" id="maxNumberOfGuests" required [(ngModel)]="capacity.maxNumberOfGuests" name="maxNumberOfGuests"/>
+    </div>
+
+    <div class="form-group">
+      <label for="phoneNumber">Phone Number</label>
+      <input class="form-control" type="tel" id="phoneNumber" [(ngModel)]="contactInfo.phoneNumber" name="phoneNumber"/>
+    </div>
+
+    <div class="form-group">
+      <label for="mobileNumber">Mobile Number</label>
+      <input class="form-control" type="tel" id="mobileNumber" required  [(ngModel)]="contactInfo.mobileNumber" name="mobileNumber"/>
+    </div>
+    <div class="form-group">
+      <label for="emailAddress">Email Address</label>
+      <input class="form-control" type="email" id="emailAddress" required  [(ngModel)]="contactInfo.emailAddress" name="emailAddress"/>
+    </div>
+
+    <button (click)="addCaterer()" class="btn btn-success">Submit</button>
+  </div>
+
+</div>

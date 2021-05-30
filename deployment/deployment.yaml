@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: caterer-service
+spec:
+  selector:
+    matchLabels:
+      app: caterer-service
+  revisionHistoryLimit: 1
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: caterer-service
+    spec:
+      containers:
+        - name: caterer-service
+          image: subbanarasa/caterer-service
+          imagePullPolicy: Always      
+          volumeMounts:
+            - name: config-volume
+              mountPath: /config/
+            - name: logs
+              mountPath: /logs/
+      volumes:
+        - name: config-volume
+          configMap:
+            name: caterer-service-configmap
+        - name: logs
+          persistentVolumeClaim:
+            claimName: caterer-service-log-pvc
+      restartPolicy: Always

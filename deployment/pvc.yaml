@@ -1,0 +1,11 @@
+# requires azurefile storage class to be defined on global level
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: caterer-service-log-pvc
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 1Gi

@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: caterer-service
+  labels:
+    do-not-recreate: "true"
+spec:
+  selector:
+    app: caterer-service
+  ports:
+    - port: 80
+      targetPort: 8080
+  type: LoadBalancer

@@ -1,0 +1,36 @@
+<div class="jumbotron" style="background-color: #fff; height: calc(95vh);">
+  <div>
+    <p>Enter City Name</p>
+    <input type="text" id="cityName" required [(ngModel)]="cityName"/>
+    <button (click)="search()" class="btn btn-success">Search</button>
+    <span class = "alert-warning" *ngIf="error">{{error}}</span>
+  </div>
+
+  <table class="table table-sm table-bordered table-striped table-hover">
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>City Name</th>
+      <th>Street name and number</th>
+      <th>Mobile Number</th>
+      <th></th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr *ngFor="let caterer of caterers">
+      <td>{{caterer.id}}</td>
+      <td>{{caterer.name}}</td>
+      <td>{{caterer.location?.cityName}}</td>
+      <td>{{caterer.location?.streetNameAndNumber}}</td>
+      <td>{{caterer.contactInfo?.mobileNumber}}</td>
+      <td>
+        <a [routerLink]="['/caterers', caterer.id]">Show Details</a>
+      </td>
+    </tr>
+    </tbody>
+
+  </table>
+
+</div>

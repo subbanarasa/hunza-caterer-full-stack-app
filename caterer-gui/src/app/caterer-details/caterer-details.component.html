@@ -1,0 +1,49 @@
+<div class="jumbotron" >
+  <div class="panel-heading">
+    <h2>Caterer Details</h2>
+  </div>
+  <div class="submit-form">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input class="form-control" readonly id="name" value="{{caterer.name}}" name="name"/>
+    </div>
+    <div class="form-group">
+      <label for="cityName">City Name</label>
+      <input class="form-control" readonly id="cityName" value="{{caterer.location?.cityName}}" name="cityName"/>
+    </div>
+    <div class="form-group">
+      <label for="streetNameAndNumber">Street Name And Number</label>
+      <input class="form-control" readonly id="streetNameAndNumber"  value="{{caterer.location?.streetNameAndNumber}}" name="streetNameAndNumber"/>
+    </div>
+    <div class="form-group">
+      <label for="postalCode">Postal Code</label>
+      <input class="form-control" readonly id="postalCode" value="{{caterer.location?.postalCode}}" name="postalCode"/>
+    </div>
+
+    <div class="form-group">
+      <label for="minNumberOfGuests">Min Guests</label>
+      <input class="form-control" readonly id="minNumberOfGuests" value="{{caterer.capacity?.minNumberOfGuests}}" name="minNumberOfGuests"/>
+    </div>
+    <div class="form-group">
+      <label for="maxNumberOfGuests">Max Guests</label>
+      <input class="form-control" readonly id="maxNumberOfGuests" value="{{caterer.capacity?.maxNumberOfGuests}}" name="maxNumberOfGuests"/>
+    </div>
+
+    <div class="form-group">
+      <label for="phoneNumber">Phone Number</label>
+      <input class="form-control" readonly id="phoneNumber" value="{{caterer.contactInfo?.phoneNumber}}" name="phoneNumber"/>
+    </div>
+
+    <div class="form-group">
+      <label for="mobileNumber">Mobile Number</label>
+      <input class="form-control" readonly id="mobileNumber" value="{{caterer.contactInfo?.mobileNumber}}" name="mobileNumber"/>
+    </div>
+    <div class="form-group">
+      <label for="emailAddress">Email Address</label>
+      <input class="form-control" readonly id="emailAddress" value="{{caterer.contactInfo?.emailAddress}}" name="emailAddress"/>
+    </div>
+
+    <button (click)="back()" class="btn btn-success">Back</button>
+  </div>
+
+</div>
